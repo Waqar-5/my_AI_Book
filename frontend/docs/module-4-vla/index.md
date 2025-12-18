@@ -30,7 +30,7 @@ After completing this module, you will be able to:
 
 This module is organized into three main chapters:
 
-1. [Voice-to-Action Interfaces](./voice-interfaces/index) - Covering speech recognition with OpenAI Whisper and mapping voice commands to robot intents
+1. [Voice-to-Action Interfaces](./voice-interfaces/) - Covering speech recognition with OpenAI Whisper and mapping voice commands to robot intents
 2. Cognitive Planning with LLMs - Explaining how to translate natural language into ROS 2 action sequences and task decomposition
 3. End-to-End Autonomous Humanoid - Implementing the complete VLA pipeline with perception, navigation, and manipulation in simulation
 

@@ -3,13 +3,13 @@
 This document defines key terms specific to Module 4: Vision-Language-Action (VLA) for Humanoid Robots to ensure consistent use across all chapters. For related terminology from other modules, see the following:
 
 - [Module 1: The Robotic Nervous System (ROS 2)](/docs/modules/robotic-nervous-system/intro) terminology
-- [Module 2: The Digital Twin (Gazebo & Unity)](/docs/module-2-digital-twin/index) terminology
+- [Module 2: The Digital Twin (Gazebo & Unity)](/docs/module-2-digital-twin/terminology) terminology
 - [Module 3: The AI-Robot Brain](/docs/modules/ai-robot-brain/photorealistic-simulation) terminology
 
 ## Core Concepts
 
 - **Vision-Language-Action (VLA) System**: An integrated system that combines visual perception, language understanding, and physical action to enable intelligent robot behaviors.
-- **Voice-to-Action Interface**: A system component that processes spoken language and maps it to robotic actions using speech recognition and intent classification. For detailed implementation, see [Voice-to-Action Interfaces](/docs/module-4-vla/voice-interfaces/index).
+- **Voice-to-Action Interface**: A system component that processes spoken language and maps it to robotic actions using speech recognition and intent classification. For detailed implementation, see [Voice-to-Action Interfaces](/docs/module-4-vla/voice-interfaces/).
 - **Large Language Model (LLM)**: A sophisticated AI model, typically based on transformer architecture, capable of understanding and generating human-like text for cognitive planning tasks.
 - **Cognitive Planning**: The process of using AI models to decompose high-level natural language instructions into executable action sequences for robots.
 - **ROS 2 Action Sequence**: Specific commands and parameters structured according to ROS 2 communication protocols for robot control.

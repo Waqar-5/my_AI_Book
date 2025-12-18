@@ -4,7 +4,7 @@ This document defines key terms specific to Module 2: Digital Twin (Gazebo & Uni
 
 - [Module 1: The Robotic Nervous System (ROS 2)](/docs/modules/robotic-nervous-system/intro) terminology
 - [Module 3: The AI-Robot Brain](/docs/modules/ai-robot-brain/photorealistic-simulation) terminology
-- [Module 4: Vision-Language-Action (VLA)](/docs/modules/vla/intro) terminology
+- [Module 4: Vision-Language-Action (VLA)](/docs/module-4-vla/) terminology
 
 ## Core Concepts
 
