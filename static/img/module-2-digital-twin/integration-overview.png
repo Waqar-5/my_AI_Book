@@ -1,0 +1,12 @@
+This is a placeholder file for the Integration Overview diagram. In a real implementation, this would be a PNG image showing:
+
+Integration Overview:
+- Gazebo Physics Simulation
+- Unity Visualization
+- Sensor Simulation (LiDAR, Depth Camera, IMU)
+- State Bridge/Synchronization
+- ROS Integration
+- AI Perception Pipelines
+- Human-Robot Interaction
+
+The diagram would illustrate how all components work together in the complete digital twin system.

@@ -1,55 +1,63 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!-- 
+SYNC IMPACT REPORT
+Version change: 0.1.0 → 1.0.0
+Modified principles: None (completely new constitution for the project)
+Added sections: All sections added to define the AI-Native Book project's principles
+Removed sections: Placeholder template sections replaced with specific content
+Templates requiring updates: ✅ No updates required for existing templates
+Follow-up TODOs: None
+-->
+# AI-Native Book on Physical AI & Humanoid Robotics Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Technical Accuracy & Scientific Rigor
+All technical content must be grounded in established robotics, AI, and simulation standards. 
+Content must align with industry-leading frameworks including ROS 2, Gazebo, NVIDIA Isaac, and OpenAI Agents SDK. 
+All implementations must be validated against real-world physics and robotics principles.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Clarity for Advanced Technical Audience
+All content must be accessible and comprehensible to readers with AI, robotics, and computer science backgrounds. 
+Explanations must be precise and thorough, with clear connections between theoretical concepts and practical implementations.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Reproducibility & Verification
+Every code example, simulation setup, and architectural decision must be fully reproducible. 
+All implementations must include runnable code, detailed comments, and step-by-step reproduction guides. 
+Results must be verifiable across different environments.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. AI-Native Development & Spec-Driven Workflows
+All content creation and software development must leverage AI-assisted tools and follow Spec-Kit Plus driven methodologies. 
+Documentation-first approach is mandatory for all features and architectural decisions.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Theory-Practice Alignment
+Strong alignment between theoretical concepts, simulations, and practical implementations is required. 
+Each theoretical concept must be demonstrated through practical examples, and all practical implementations 
+must be grounded in theoretical foundations.
 
-### [PRINCIPLE_6_NAME]
+### VI. Modularity & Extensibility
+Both content and software components must follow modular, extensible design principles. 
+Each module should be independently usable and extendable, supporting easy addition of new robotics capabilities 
+and AI techniques.
 
+## Standards & Requirements
 
-[PRINCIPLE__DESCRIPTION]
+All technical explanations must align with established frameworks (ROS 2, Gazebo, NVIDIA Isaac, OpenAI Agents SDK). 
+Code examples must be runnable, well-commented, and reproducible. Architectural decisions must be justified and 
+traceable with clear rationales documented in ADRs. Terminology must be consistent across chapters and modules. 
+Documentation-first approach using Spec-Kit Plus is mandatory. Clear separation between conceptual explanations 
+and implementation details must be maintained.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+## Development Workflow
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+Content and software development follows Docusaurus-based publishing workflow with GitHub Pages deployment. 
+RAG chatbot integration using OpenAI Agents/ChatKit SDKs, FastAPI backend, Qdrant Cloud vector storage, 
+and Neon Serverless Postgres for metadata. Module-based curriculum structure covering robotic nervous systems, 
+digital twins, AI-robot brains, and vision-language-action systems.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution governs all aspects of the AI-Native Book on Physical AI & Humanoid Robotics project. 
+All contributions must comply with these principles. Amendments require formal documentation and 
+project maintainer approval with clear migration plans for affected components.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2025-01-01 | **Last Amended**: 2025-12-16

@@ -1,0 +1,12 @@
+This is a placeholder file for the Gazebo Architecture diagram. In a real implementation, this would be a PNG image showing:
+
+Gazebo Physics Simulation Architecture:
+- Humanoid Robot Model (URDF)
+- Physics Engine (ODE/Bullet)  
+- Collision Detection System
+- Environment Models
+- Sensor Simulations
+- ROS 2 Interface
+- Control Systems
+
+The diagram would illustrate how these components interact in the simulation environment.

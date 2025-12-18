@@ -1,0 +1,34 @@
+# Isaac Sim Basic Scene File
+# File: basic-scene.usd
+
+# This is a simplified USD file to represent a basic Isaac Sim scene
+# In a real implementation, this would contain detailed USD specifications
+# for a 3D scene with humanoid robot models, environments, and sensors
+
+# The actual content would include:
+# - Robot model (humanoid) with proper joint definitions
+# - Environment (with obstacles, lighting)
+# - Sensors (camera, LiDAR, IMU)
+# - Physics properties
+# - Materials and textures
+
+# Example simplified structure:
+# def Xform "World"
+# {
+#    def Xform "Robot"
+#    {
+#        # Robot model with links and joints
+#    }
+#    
+#    def Xform "Environment"
+#    {
+#        # Environment objects
+#    }
+#    
+#    def Xform "Sensors"
+#    {
+#        # Sensor definitions
+#    }
+# }
+
+# This file would be properly formatted USD with Isaac Sim specifications

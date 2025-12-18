@@ -1,0 +1,59 @@
+<!-- Isaac Sim Architecture Diagram -->
+<!-- File: isaac-sim-architecture.svg -->
+
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .title { font: bold 24px sans-serif; }
+    .subtitle { font: 18px sans-serif; }
+    .component { font: 14px sans-serif; }
+  </style>
+  
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" class="title">NVIDIA Isaac Sim Architecture</text>
+  <text x="400" y="70" text-anchor="middle" class="subtitle">Robot Simulation and Synthetic Data Generation</text>
+  
+  <!-- Isaac Sim Environment -->
+  <rect x="50" y="100" width="700" height="400" fill="#eef4f7" stroke="#3498db" stroke-width="2" rx="10"/>
+  <text x="400" y="130" text-anchor="middle" font-weight="bold">Isaac Sim Environment</text>
+  
+  <!-- Robot Model -->
+  <rect x="100" y="150" width="200" height="250" fill="#d5f5e3" stroke="#27ae60" stroke-width="2" rx="5"/>
+  <text x="200" y="170" text-anchor="middle" class="component">Humanoid Robot Model</text>
+  <circle cx="200" cy="220" r="20" fill="#aed6f1"/> <!-- Head -->
+  <rect x="180" y="240" width="40" height="100" fill="#5dade2"/> <!-- Torso -->
+  <rect x="180" y="340" width="40" height="80" fill="#5dade2"/> <!-- Legs -->
+  <rect x="120" y="250" width="60" height="20" fill="#5dade2"/> <!-- Left arm -->
+  <rect x="220" y="250" width="60" height="20" fill="#5dade2"/> <!-- Right arm -->
+  
+  <!-- Environment Objects -->
+  <rect x="350" y="200" width="150" height="180" fill="#f9e79f" stroke="#f39c12" stroke-width="2" rx="5"/>
+  <text x="425" y="220" text-anchor="middle" class="component">Environment Objects</text>
+  <circle cx="380" cy="250" r="15" fill="#e74c3c"/> <!-- Obstacle -->
+  <circle cx="450" cy="320" r="20" fill="#e74c3c"/> <!-- Obstacle -->
+  
+  <!-- Sensors -->
+  <ellipse cx="580" cy="180" rx="30" ry="15" fill="#bb8fce" stroke="#8e44ad" stroke-width="2"/>
+  <text x="580" y="185" text-anchor="middle" font-size="12">Camera</text>
+  
+  <ellipse cx="580" cy="220" rx="30" ry="15" fill="#bb8fce" stroke="#8e44ad" stroke-width="2"/>
+  <text x="580" y="225" text-anchor="middle" font-size="12">LiDAR</text>
+  
+  <ellipse cx="580" cy="260" rx="30" ry="15" fill="#bb8fce" stroke="#8e44ad" stroke-width="2"/>
+  <text x="580" y="265" text-anchor="middle" font-size="12">IMU</text>
+  
+  <!-- Isaac ROS Connection -->
+  <line x1="400" y1="400" x2="400" y2="500" stroke="#e74c3c" stroke-width="3" stroke-dasharray="5,5"/>
+  <text x="400" y="490" text-anchor="middle" font-size="14" fill="#c0392b">ROS 2 Bridge</text>
+  
+  <!-- Isaac ROS Components -->
+  <rect x="300" y="500" width="200" height="80" fill="#d2b4de" stroke="#8e44ad" stroke-width="2" rx="5"/>
+  <text x="400" y="520" text-anchor="middle" class="component">Isaac ROS Components</text>
+  <text x="400" y="540" text-anchor="middle" font-size="12">Visual SLAM • DNN Inference</text>
+  <text x="400" y="560" text-anchor="middle" font-size="12">Image Pipeline • AprilTag</text>
+  
+  <!-- Legend -->
+  <rect x="10" y="520" width="180" height="70" fill="white" stroke="#ccc" stroke-width="1"/>
+  <text x="100" y="535" text-anchor="middle" font-weight="bold">Legend</text>
+  <circle cx="25" cy="550" r="6" fill="#aed6f1"/><text x="40" y="555" font-size="10">Robot Parts</text>
+  <circle cx="25" cy="570" r="6" fill="#e74c3c"/><text x="40" y="575" font-size="10">Sensors</text>
+</svg>

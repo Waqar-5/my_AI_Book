@@ -1,0 +1,23 @@
+# Isaac Sim Basic Scene
+# File: basic-scene.usd
+
+# This is a placeholder USD file that represents a basic Isaac Sim scene
+# In a real implementation, this would contain detailed USD specifications
+# for a 3D scene with robots, environments, and sensors
+
+# The actual content would include:
+# - Robot model (humanoid)
+# - Environment (with obstacles, lighting)
+# - Sensors (RGB camera, LiDAR, IMU)
+# - Physics properties
+# - Materials and textures
+
+# Example simplified structure:
+# primPath = "/World"
+#   addChildren = [
+#     "/World/Robot",
+#     "/World/Environment",
+#     "/World/Light",
+#   ]
+
+# This file would be properly formatted USD/Z with Isaac Sim specifications

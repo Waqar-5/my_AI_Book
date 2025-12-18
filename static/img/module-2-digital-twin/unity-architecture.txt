@@ -1,0 +1,11 @@
+This is a placeholder file for the Unity Architecture diagram. In a real implementation, this would be a PNG image showing:
+
+Unity Visualization Architecture:
+- Gazebo Physics Engine
+- State Bridge/ROS Bridge
+- Unity Rendering Engine
+- Visual Assets and Materials
+- Human-Robot Interaction Interface
+- Synchronization Layer
+
+The diagram would illustrate how these components interact in the visualization system.

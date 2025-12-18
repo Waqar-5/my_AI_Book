@@ -1,0 +1,13 @@
+This is a placeholder file for the voice architecture diagram. In a real implementation, this would be a PNG image showing:
+
+Voice-to-Action Architecture:
+- Microphone Input
+- OpenAI Whisper Speech Recognition
+- Voice Command Processing
+- Intent Classification
+- Entity Extraction
+- Robot Action Mapping
+- ROS 2 Action Execution
+- Voice Feedback System
+
+The diagram would illustrate how these components interact in the voice-to-action system.

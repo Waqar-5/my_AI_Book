@@ -1,0 +1,12 @@
+This is a placeholder file for the Sensor Simulation Architecture diagram. In a real implementation, this would be a PNG image showing:
+
+Sensor Simulation Architecture:
+- LiDAR Simulation (Gazebo ray sensors)
+- Depth Camera Simulation (Gazebo depth sensors)  
+- IMU Simulation (Gazebo IMU sensors)
+- Data Processing Pipeline
+- AI Perception Systems
+- Ground Truth Generation
+- Validation Framework
+
+The diagram would illustrate how these components interact in the sensor simulation system.
