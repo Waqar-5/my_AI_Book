@@ -1,0 +1,103 @@
+# API Contract: Embedding Pipeline
+
+## Overview
+This contract defines the interface for the embedding pipeline that extracts content from Docusaurus-based book websites, generates embeddings using Cohere models, and stores them in Qdrant vector database.
+
+## Configuration API
+
+### POST /config
+Configure the embedding pipeline with necessary credentials and settings.
+
+**Request Body**:
+```json
+{
+  "cohere_api_key": "string",
+  "qdrant_api_key": "string",
+  "qdrant_url": "string",
+  "source_urls": ["string"],
+  "collection_name": "string",
+  "chunk_size": "integer",
+  "chunk_overlap": "integer"
+}
+```
+
+**Response** (200 OK):
+```json
+{
+  "status": "configured",
+  "collection_created": "boolean"
+}
+```
+
+## Pipeline Execution API
+
+### POST /run
+Execute the full pipeline: extract content → chunk → embed → store.
+
+**Request Body**:
+```json
+{
+  "dry_run": "boolean (default: false)",
+  "reprocess": "boolean (default: false)"
+}
+```
+
+**Response** (200 OK):
+```json
+{
+  "status": "completed",
+  "pages_processed": "integer",
+  "chunks_created": "integer",
+  "embeddings_generated": "integer",
+  "start_time": "datetime",
+  "end_time": "datetime",
+  "duration_seconds": "number"
+}
+```
+
+## Query API
+
+### POST /query
+Query the vector database for similar content to the provided text.
+
+**Request Body**:
+```json
+{
+  "text": "string",
+  "top_k": "integer (default: 5)",
+  "min_score": "number (default: 0.0)"
+}
+```
+
+**Response** (200 OK):
+```json
+{
+  "results": [
+    {
+      "id": "string",
+      "score": "number",
+      "payload": {
+        "source_url": "string",
+        "page_title": "string",
+        "chunk_index": "integer",
+        "text_content": "string"
+      }
+    }
+  ]
+}
+```
+
+## Status API
+
+### GET /status
+Get the status of the embedding pipeline.
+
+**Response** (200 OK):
+```json
+{
+  "status": "ready | indexing | error",
+  "last_run": "datetime",
+  "total_embeddings": "integer",
+  "collection_size": "integer"
+}
+```

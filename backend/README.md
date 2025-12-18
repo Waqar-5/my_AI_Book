@@ -1,0 +1,120 @@
+# Embeddings Pipeline
+
+This project implements a pipeline to extract content from Docusaurus-based book websites, generate embeddings using Cohere models, and store them in Qdrant vector database with associated metadata. This enables RAG chatbot functionality by providing a mechanism to index book content for semantic search and retrieval.
+
+## Prerequisites
+
+- Python 3.11+
+- UV package manager
+- Cohere API key
+- Qdrant Cloud account and API key
+
+## Setup
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd <repository-name>
+   ```
+
+2. Navigate to the backend directory:
+   ```bash
+   cd backend
+   ```
+
+3. Install dependencies using UV:
+   ```bash
+   uv pip install -e .
+   # Or if using pyproject.toml
+   uv pip install -e .
+   ```
+
+4. Configure environment variables:
+   ```bash
+   # Copy the example environment file
+   cp .env.example .env
+
+   # Edit the .env file with your credentials
+   nano .env
+   ```
+
+Add your credentials:
+```
+COHERE_API_KEY=your_cohere_api_key
+QDRANT_API_KEY=your_qdrant_api_key
+QDRANT_URL=your_qdrant_cluster_url
+SOURCE_URL=https://my-ai-book-gamma.vercel.app/
+COLLECTION_NAME=RAG_Embedding
+```
+
+## Usage
+
+### Run the Full Pipeline
+Execute the complete pipeline: fetch URLs, extract text, chunk content, generate embeddings, and store in Qdrant.
+
+```bash
+python main.py
+```
+
+The script will:
+1. Discover all URLs from the Docusaurus site
+2. Extract clean text from each page
+3. Chunk the content into appropriate sizes
+4. Generate embeddings using Cohere
+5. Create the "RAG_Embedding" collection in Qdrant
+6. Store all embeddings with metadata
+
+### Run with Custom Parameters
+```bash
+# With custom chunk size and overlap
+python main.py --chunk-size 1000 --chunk-overlap 100
+
+# For a different URL
+python main.py --url https://different-book-site.com
+```
+
+### Dry Run
+To run the pipeline without storing embeddings to Qdrant:
+```bash
+python main.py --dry-run
+```
+
+### Reprocess Content
+To reprocess content even if it already exists in Qdrant:
+```bash
+python main.py --reprocess
+```
+
+## Architecture
+
+The pipeline consists of several modules:
+
+- `src/extraction/content_extractor.py`: Handles content extraction from Docusaurus sites
+- `src/embedding/embedding_generator.py`: Generates embeddings using Cohere
+- `src/storage/qdrant_client.py`: Stores embeddings in Qdrant vector database
+- `src/utils/helpers.py`: Utility functions for chunking, logging, etc.
+- `config/settings.py`: Configuration and settings management
+- `main.py`: Orchestrates the full pipeline
+
+## Testing
+
+Run the tests using pytest:
+
+```bash
+cd backend
+python -m pytest tests/
+```
+
+## Troubleshooting
+
+### Common Issues
+1. **Rate Limiting**: If you get rate limit errors from Cohere, the pipeline includes backoff mechanisms but you might need to adjust the rate limits in your Cohere account.
+
+2. **Invalid URLs**: If certain URLs return 404s, check that the source website hasn't changed its structure.
+
+3. **Memory Issues**: For very large sites, you may need to adjust the chunk size parameters to process smaller pieces of content at a time.
+
+## Next Steps
+- Integrate with your RAG chatbot application
+- Set up scheduled runs for content updates
+- Monitor embedding quality and adjust chunking strategy as needed

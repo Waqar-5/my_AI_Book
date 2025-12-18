@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+embeddings_pipeline.egg-info/PKG-INFO
+embeddings_pipeline.egg-info/SOURCES.txt
+embeddings_pipeline.egg-info/dependency_links.txt
+embeddings_pipeline.egg-info/requires.txt
+embeddings_pipeline.egg-info/top_level.txt
+tests/test_embedding.py
+tests/test_extraction.py
+tests/test_storage.py

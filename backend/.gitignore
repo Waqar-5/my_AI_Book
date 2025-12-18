@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+.ENV
+.ENV.*
+.venv/
+.venv/**
+.venv/**
+.pytest_cache/
+.coverage
+.htmlcov/
+.pytest_cache/
+.pytest_cache/**
+.pytest_cache/**/*
+
+# Virtual Environment
+ENV/
+.venv/
+.venv/**
+.venv/**
+venv/
+venv/**
+venv/**
+env/
+env/**
+env/**
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+logs/
+logs/**
+logs/**
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
